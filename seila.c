@@ -58,6 +58,8 @@ int cadast(){ //Função cadastro
 	fprintf(file,", "); 
 	fclose(file);
 	
+	printf ("Obrigado por se cadastrar!\n\n");
+	
 	system ("pause");
 }
 
