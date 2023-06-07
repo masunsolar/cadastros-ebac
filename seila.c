@@ -93,22 +93,21 @@ int consult(){
 
 int del(){
 	
-	char cpf[40];
-	
-	printf("Qual usuário deseja deletar? Digite o cpf: ");
-	scanf("%s",cpf);
-	
-	remove(cpf);
-	
-	FILE *file;
-	file = fopen(cpf,"r");
-	
-	if(file == NULL){
-		
-	printf("CPF não encontrado...\n");
-	system("pause");
-		
-	}
+    char cpf[40];
+    
+    printf("Qual usuário deseja deletar?\nDigite o cpf: ");
+    scanf("%s", cpf);
+    
+	int retorno = remove(cpf);
+    
+	if (retorno == 0) {
+        printf("deletado\n\n");
+        system("pause");
+    } else {
+        printf("nao deletado\n\n");
+        system("pause");
+    }
+    return 0;
 }
 
 int main(){
