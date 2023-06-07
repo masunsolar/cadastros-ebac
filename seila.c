@@ -122,11 +122,12 @@ int main(){
 		
 		setlocale(LC_ALL, "English_united States.1252"); //Definindo linguagem
 		
-		printf (".... Teste de seleção bom ....\n\n"); //Inicio do menu
+		printf (".... Teste de seleção ....\n\n"); //Inicio do menu
 		printf ("Escolha a opção do menu:\n\n");
-		printf ("\t1 - Cadastrar um usuário\n");
-		printf ("\t2 - Consultar um usuário\n");
-		printf ("\t3 - Excluir um usuário\n\n"); 
+		printf ("\t1 - Cadastrar um usuário:\n");
+		printf ("\t2 - Consultar um usuário:\n");
+		printf ("\t3 - Excluir um usuário:\n");
+		printf ("\t4 - Sair do sistema:\n\n");
 		printf ("Opção: "); //Fim do menu
 		
 		scanf("%d", &option); //Armazenar escolha
@@ -145,6 +146,11 @@ int main(){
 					
 		case 3:
 			del();
+			break;
+			
+		case 4:
+			printf("Obrigdo por utilizar o aplicativo!\n\n");
+			return 0;
 			break;
 		
 		default:
