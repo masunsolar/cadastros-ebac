@@ -103,10 +103,10 @@ int del(){
 	int retorno = remove(cpf);
     
 	if (retorno == 0) {
-        printf("deletado\n\n");
+        printf("Deletado com sucesso!\n\n");
         system("pause");
     } else {
-        printf("nao deletado\n\n");
+        printf("Não encontrado...\n\n");
         system("pause");
     }
     return 0;
