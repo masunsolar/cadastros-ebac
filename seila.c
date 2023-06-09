@@ -103,62 +103,85 @@ int del(){
 	int retorno = remove(cpf);
     
 	if (retorno == 0) {
+		
         printf("Deletado com sucesso!\n\n");
         system("pause");
-    } else {
+    
+	} 
+	
+	else {
+		
         printf("Não encontrado...\n\n");
         system("pause");
-    }
+    
+	}
+	
     return 0;
+
 }
 
 int main(){
 	
 	int option=0; //Definindo a variavel 
 	int laco=1;
+	char password[10]="a";
+	int comparacao;
 	
-	for(laco=1;laco=1;){
-		
-		system("cls");
-		
-		setlocale(LC_ALL, "English_united States.1252"); //Definindo linguagem
-		
-		printf (".... Teste de seleção ....\n\n"); //Inicio do menu
-		printf ("Escolha a opção do menu:\n\n");
-		printf ("\t1 - Cadastrar um usuário:\n");
-		printf ("\t2 - Consultar um usuário:\n");
-		printf ("\t3 - Excluir um usuário:\n");
-		printf ("\t4 - Sair do sistema:\n\n");
-		printf ("Opção: "); //Fim do menu
-		
-		scanf("%d", &option); //Armazenar escolha
+	printf(".... Registro de nomes EBAC ....");
+	printf("Login de administrador!\n\nDigite a sua senha: ");
+	scanf("%s",password);
 	
-		system("cls");
+	comparacao = strcmp(password, "admin");
+	
+	if (comparacao == 0){
+	
+		for(laco=1;laco=1;){
 		
-		switch(option){ //Inicio da seleção
+			system("cls");
 		
-		case 1:
-			cadast();
-			break;
-					
-		case 2:
-			consult();
-			break;
-					
-		case 3:
-			del();
-			break;
+			setlocale(LC_ALL, "English_united States.1252"); //Definindo linguagem
+		
+			printf (".... Registro de nomes EBAC ....\n\n"); //Inicio do menu
+			printf ("Escolha a opção do menu:\n\n");
+			printf ("\t1 - Cadastrar um usuário:\n");
+			printf ("\t2 - Consultar um usuário:\n");
+			printf ("\t3 - Excluir um usuário:\n");
+			printf ("\t4 - Sair do sistema:\n\n");
+			printf ("Opção: "); //Fim do menu
 			
-		case 4:
-			printf("Obrigdo por utilizar o aplicativo!\n\n");
-			return 0;
-			break;
+			scanf("%d", &option); //Armazenar escolha
+	
+			system("cls");
 		
-		default:
-			printf("Opção Invalida\n");
-			system("pause");
-			break;
+			switch(option){ //Inicio da seleção
+		
+				case 1:
+					cadast();
+					break;
+						
+				case 2:
+					consult();
+					break;
+					
+				case 3:
+					del();
+					break;
+			
+				case 4:
+					printf("Obrigdo por utilizar o aplicativo!\n\n");
+					return 0;
+					break;
+		
+				default:
+					printf("Opção Invalida\n");
+					system("pause");
+					break;
 				
-		} //fim da seleção
+				
+			} //fim da seleção
+		}
 	}
+	else 
+		printf("Senha incorreta...\n\n");
 }
+
